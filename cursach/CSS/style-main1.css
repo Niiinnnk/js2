@@ -1,0 +1,391 @@
+.sold, .viewed, .new{
+	width: 1240px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+h2{
+	font-family: 'InterBold';
+	color: #fff;
+	margin: 25px 0;
+}
+/* .sold{
+	margin-top: 105px;
+} */
+
+.news{
+	display: flex;
+	justify-content: space-between;
+	background-color: #f0f0f0;
+	width: 1240px;
+}
+.h-news{
+	width: 200px;
+	height: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	background-color: #7068ED;
+	border: none;
+	border-radius: 0 0 5px 5px;
+}
+.text-news{
+	font-size: 24px;
+	width: 650px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.text-news p{
+	margin: 0;
+}
+.img-news img{
+	height: 130px;
+}
+
+
+.new-assortment{
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+.new-prod, .viewed-prod{
+	width: 385px;
+	height: 222px;
+	margin-right: 43px;
+	margin-bottom: 43px;
+	background-color: #f0f0f0;
+}
+.viewed-assortment{
+	width: 100%;
+	display: flex;
+}
+.new-prod, .viewed-prod{
+	padding: 25px;
+	display: flex;
+	border: none;
+	border-radius: 5px;
+}
+.new-prod-img{
+	height: 100%;
+}
+.card-info{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	margin-left: 20px;
+}
+.card-info a{
+	text-decoration: none;
+	color: #000;
+}
+
+.rating, .feedback{
+	display: flex;
+	margin-bottom: 7px;
+}
+.rating p, .feedback p{
+	margin: 0;
+	margin-left: 5px;
+	font-family: 'InterBold';
+	font-size: 14px;
+}
+h5, .cost p{
+	font-family: 'InterBold';
+}
+.cost p{
+	margin: 0;
+	font-size: 20px;
+}
+.cost{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.basket{
+	background-color: #7865E0;
+	height: 30px;
+	width: 45px;
+	border: none;
+	border-radius: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.sold-slider {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+}
+.slider {	
+	margin: 20px;
+	text-align: center;
+	border-radius: 20px;
+	overflow: hidden;
+	position: relative;
+}
+.slides {
+	width: 100%;
+	display: flex;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	position: relative;
+	scroll-behavior: smooth;
+	scroll-snap-type: x mandatory;
+	border: 1px solid #7068ED;
+}
+.slide {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-shrink: 0;
+	width: 100%;
+	height: 500px;
+	scroll-snap-align: center;
+	margin-right: 0px;
+}
+.slide a{
+	display: block;
+	height: 100%;
+}
+.fade, .fade1 {
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+	animation-name: fade;
+	animation-duration: 5s;
+}
+@-webkit-keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}
+@keyframes fade {
+	from {opacity: .4} 
+	to {opacity: 1}
+}
+.slides img{
+	width: 100%;	
+	pointer-events: none;
+}
+.slide__text {
+	font-size: 64px;
+	color: #fff;
+	font-family: 'InterBold';
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background-color: #7068ED;
+	border-radius: 5px 0 0 0;
+	padding: 15px 50px;
+}
+
+
+.slider_dots {
+	display: flex;
+	justify-content: space-between;
+	margin: 15px 0 50px;
+}
+.slider_dot {
+	height: 5px;
+	width: 60px;
+	background-color: #F0F0F0;
+	margin: 0 30px;
+}
+.active{
+	background-color: #7068ED;
+}
+.modal {
+	position: fixed;
+	/* фиксированное положение */
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.85);
+	/* цвет фона */
+	/* opacity: 0; */
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	/* анимация перехода */
+	pointer-events: none;
+	/* элемент невидим для событий мыши */
+  }
+
+
+  .modal-dialog {
+	position: relative;
+	width: 570px;
+	margin: 10px auto;
+  }
+
+  /* свойства для блока, содержащего контент модального окна */
+  .modal-content {
+	position: relative;
+	top: 50px;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	background-color: #fff;
+	-webkit-background-clip: padding-box;
+	background-clip: padding-box;
+	border-radius: 5px;
+	background-color: #F0F0F0;
+	border: 1px solid #7068ED;
+	outline: 0;
+  }
+
+  /* свойства для заголовка модального окна */
+  .modal-header {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	flex-direction: row;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	-ms-flex-align: center;
+	align-items: flex-start;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+	padding-top: 30px;
+	padding-left: 65px;
+  }
+  .modal-header_title {
+	display: flex;
+	align-items: center;		
+  }
+  .modal-title {
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 24px;
+	font-weight: 700;
+	color: #000;
+  }
+	.modal-header_cards {
+		margin-left: 30px;
+		display: flex;
+		flex-direction: column;
+		align-content: center;
+	}
+	.cards span{
+		margin-right: 5px;
+		color: #646464;
+	}
+  .close {
+	float: right;
+	font-size: 24px;
+	margin-right: 65px;
+	font-weight: 700;
+	line-height: 1;
+	color: #7068ED;
+	text-decoration: none;
+  }
+
+  /* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+  .close:focus,
+  .close:hover {
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+	opacity: .75;
+  }
+
+  /* свойства для блока, содержащего основное содержимое окна */
+  .modal-body {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 1 auto;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+	overflow: auto;
+	margin-top: 10px;
+	padding-left: 65px;
+	padding-right: 65px;
+  }
+  .modal-body h4 {
+	margin: 0;
+	font-size: 16px;
+	color: #000;
+	font-weight: normal;
+  }
+  .modal-body input {
+	width: 100%;
+	height: 35px;
+	border-radius: 5px;
+    border: 1px solid #7068ED;
+	color: #000;
+	background-color: #fff;
+	padding-left: 10px;
+	padding-bottom: 5px;
+	margin-top: 5px;
+  }
+  .validity_period_input {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+  }
+  .validity_period_input span {
+	color: #646464;
+	font-size: 20px;
+	margin: 0 6px;
+  }
+  .data_card {
+	display: flex;
+	flex-direction: row;	
+	justify-content: space-between;	
+	margin-top: 30px;
+  }
+  .data_card h4{
+	color: #646464;
+	font-size: 16px !important;
+  }
+  .data_card input {
+	width: 60px;
+
+  }
+  .pay_button {
+	margin-top: 50px;
+	height: 40px;
+	margin-bottom: 30px;
+	background-color: #7068ED;
+	border-radius: 5px;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: 0.5s ease;
+  }
+  .pay_button input:hover {
+	background-color: #f0f0f0;
+	color: #7068ED;
+	transition: 0.5s ease;
+  }
+  .pay_button:hover {
+	background-color: #f0f0f0;
+	transition: 0.5s ease;
+  }
+  .pay_button input{
+	color: #fff;
+	background-color: #7068ED;
+	font-size: 20px;
+	cursor: pointer;
+	height: 40px;
+	width: 440px;
+	border-radius: 5px;
+	transition: 0.5s ease;
+  }
